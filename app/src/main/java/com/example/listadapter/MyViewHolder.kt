@@ -9,11 +9,12 @@ import com.example.listadapter.databinding.ItemBinding
  * pureum
  */
 class MyViewHolder(private val binding : ItemBinding) : RecyclerView.ViewHolder(binding.root) {
+
     fun bind(data:GirlFriend){
         with(binding){
             name.text = data.name
-            age.text = data.age
-            height.text = data.height
+            age.text = data.age.toString()
+            height.text = data.height.toString()
             MBTI.text = data.mbti
             items.setOnClickListener {
                 Log.e("TAG", "Click", )
@@ -23,6 +24,7 @@ class MyViewHolder(private val binding : ItemBinding) : RecyclerView.ViewHolder(
 
     fun setAlpha(alpha : Float){
         with(binding){
+            items.alpha = alpha
             name.alpha = alpha
             age.alpha = alpha
             height.alpha = alpha

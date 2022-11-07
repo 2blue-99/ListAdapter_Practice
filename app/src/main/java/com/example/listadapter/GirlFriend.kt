@@ -6,7 +6,7 @@ package com.example.listadapter
  */
 data class GirlFriend(
     val name: String,
-    val age: String,
-    val height: String,
+    val age: Int,
+    val height: Int,
     val mbti: String
 )
